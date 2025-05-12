@@ -22,6 +22,10 @@ const User = require('./models/user.js');
 
 mongoose.connect('mongodb://localhost:27017/yelp-camp');
 
+//limit number and size of images stored in cloudinary
+//handle errors if no location found in geolocation
+//not allowing to register freely
+
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "DB connection error: "));
 db.once("open", () => {
